@@ -1,0 +1,69 @@
+@import "../../../assets/styles/prefix";
+
+.formcompo {
+  max-width: 381px;
+  max-height: 550px;
+  border: 1px solid $color-darkblue;
+  margin: 5% auto;
+}
+form {
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  .imghead {
+    padding-top: 6%;
+    text-align: center;
+    img {
+      max-width: 50%;
+      border: none;
+    }
+    h1 {
+      color: $color-darkblue;
+      font-size: 2.5rem;
+      font-weight: 900;
+    }
+  }
+  label {
+    font-size: 1rem;
+    color: $color-blue;
+  }
+}
+button {
+  width: 100%;
+  border: 1px solid $color-blue;
+  border-radius: 0;
+  background: $color-darkblue;
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    border: 1px solid $color-darkblue;
+    width: 100%;
+  }
+}
+.form-group {
+  width: 80%;
+  padding: 2px;
+  margin-left: 10%;
+  text-align: left; 
+  input {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid $color-darkblue;
+    // box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    &:focus,
+    &:hover {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  
+}

@@ -1,0 +1,64 @@
+@import './assets/styles/prefix';
+
+@font-face {
+    font-family: Lato;
+    src: url(https://fonts.google.com/specimen/Lato?selection.family=Lato);
+  }
+.bg-darkblue{
+    background:$color-darkblue;
+}
+.font-darkblue{
+    color:$color-darkblue;
+}
+.border-darkblue{
+    border:1px solid $color-darkblue;
+}
+.bg-white{
+    background:$color-white;
+}
+.font-white{
+    color:$color-white;
+}
+
+.font-black{
+    color:#000;
+}
+.bg-blue{
+    background:$color-blue;
+}
+.font-blue{
+    color:$color-blue;
+}
+.bg-lightblue{
+    background:$color-lightblue;
+}
+.font-lightblue{
+    color:$color-lightblue;
+}
+.alert-danger{
+    background: none !important;
+    font-size: 1rem;
+    color: #be0000;
+}
+body {
+    background:$color-white;
+    margin:0;
+    padding: 0;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    height: auto;
+}
+*{
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+
+html, body {height: auto; width: 100%;}
+body { margin: 0; font-family: Lato; }
+app-header{
+    background: $color-darkblue !important;
+}

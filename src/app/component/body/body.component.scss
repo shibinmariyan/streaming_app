@@ -1,0 +1,28 @@
+@import "../../../assets/styles/prefix";
+.card {
+  border: 1px solid $color-darkblue;
+  .card-footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: none !important;
+    text-align: center !important;
+    button {
+      margin: 1%;
+    }
+  }
+}
+.navbutton {
+  border: 0 !important;
+  background: none !important;
+  margin-top: 10px;
+  &:hover {
+    border-bottom: 1px solid $color-darkblue !important;
+    color: $color-blue;
+  }
+  &:focus,
+  &:active {
+    border: 0 !important;
+    background: none !important;
+  }
+}

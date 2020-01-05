@@ -1,0 +1,30 @@
+<div class="formcompo">
+    <form #login="ngForm" (ngSubmit)="loginuser(login.value)">
+        <div class="form-group imghead">
+            <img class="img-fluid img-thumbnail" src="{{imgsrc}}">
+            <h1>Admin Login </h1>
+        </div>
+        <div class="form-group">
+            <label>
+                <span>Enter the Email</span>
+                <input type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control"
+                    ngModel name="email" required validate>
+
+            </label>
+
+            <div class="alert-danger" role="alert" *ngIf="shown">{{Errormsg}}</div>
+        </div>
+        <div class="form-group">
+            <label>
+                <span>Enter the Password</span>
+                <input type="password" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control"
+                    placeholder="" name="password" ngModel required validate>
+            </label>
+
+            <div class="alert-danger" role="alert" *ngIf="shown">{{Errormsg}}</div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="bg-darkblue btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

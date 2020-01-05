@@ -1,0 +1,42 @@
+<div class="container">
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <button class="nav-link navbutton font-darkblue" (click)="setFlag('Marriage')">Marriage</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link navbutton font-darkblue" (click)="setFlag('Funeral')">Funeral</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link navbutton font-darkblue" (click)="setFlag('Events')">Events</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link navbutton font-darkblue" (click)="setFlag('Functions')">Functions</button>
+        </li>
+    </ul>
+    <div class="row mt-4">
+        <div class="col-sm-3 col-md-3 pb-2 card-deck" *ngFor="let vdo of videoDetails" style="margin-bottom: 20px;">
+            <div class="card card-outline-info" *ngIf="cond==='any'; else vdo.category===cond">
+                <img class="card-img-top rounded-circle" [src]="getImage(vdo.imageUrl)">
+                <div class="card-body">
+                    <h5 class="card-title">{{vdo.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{vdo.category}}</h6>
+                    <p class="card-text"> Hosting Date <span>{{vdo.hostingDate}}</span></p>
+                    <div class="card-footer bg-transparent">
+                        <button class="btn-primary btn" (click)="view()" data-toggle="modal"
+                            data-target="#basicModal">View</button>
+                        <button class="btn-primary btn" (click)="update()">Update</button>
+                        <!-- <!-- <button class="btn-primary btn" (click)="delete(vdo.imageUrl,vdo.title)">Delete</button> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- //////////////////////////// -->
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+   <app-view-model></app-view-model>
+  </div>
+  
